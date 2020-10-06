@@ -15,7 +15,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-@SpringBootTest @Transactional
+@SpringBootTest
+@Transactional  // start tx in each test,  run test, roll back automatically
 public class JdbcOfficerDAOTest {
     @Autowired
     private OfficerDAO dao;
